@@ -12,6 +12,8 @@ public class FunctionExample2 {
             new Student("김세연", 88, 93)
     );
 
+    // ToIntFunction 제네릭 타입 Student class 지정
+    // Student class 에는 저장된 이름, 영어점수, 수학점수가 저장되있음.
     // 평균 값 메서드
     public static double avg(ToIntFunction<Student> function){
       int sum = 0;
