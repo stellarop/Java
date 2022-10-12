@@ -20,33 +20,25 @@ public class Predicate {
 
     // 평균 메서드
     public static double avg(java.util.function.Predicate<Student2> predicate){
+        // list 돈 횟수
         int count = 0;
+        // 합계
         int sum = 0;
 
+        // student2 list 만큼 돈다
         for(Student2 student2 : list){
-            System.out.println(student2.getName());
+            // list true 에 값일 시
             if(predicate.test(student2)){
+                // 카운트 증가
                 count++;
+                // true 인 나이 더해준다
                 sum += student2.getAge();
             }
         }
+        // 합계 / list 돈 횟수
         return (double) sum / count;
     }
 
-    public static String name(java.util.function.Predicate<Student2> predicate){
-        String a = null;
-        String b = null;
-        for(Student2 student2 : list){
-
-              if("백".equals(a)){
-                  return a;
-              }else{
-                  return a;
-              }
-
-        }
-        return null;
-    }
     public static void main(String[] args) {
         // test() 메서드는 파라미터 값으로 객체 하나를 가져서 람다식도 한 개의 파라미터 사용
         // test() 메서드의 리턴 타입이 boolean, 람다식의 리턴 값은 boolean 이 적용
@@ -58,12 +50,6 @@ public class Predicate {
 
         double ageWoman = avg(t-> t.getSex().equals("여자"));
         System.out.println("여자 평균 나이 : " + ageWoman);
-
-        String name1 = name(t ->t.getAge() == 25);
-        System.out.println("24살인 사람 : " + name1);
-
-        String name2 = name(t-> t.getAge() == 25);
-        System.out.println("25살인 사람 : " + name2);
 
     }
 
