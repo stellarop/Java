@@ -7,7 +7,7 @@ package lambdaExpression;
 
 import java.util.function.Predicate;
 
-// IsEqual() 정적 메서드
+// Predicate<T> 함수적 인터페이스
 public class PredicateIsEqualExample {
     public static void main(String[] args) {
 
@@ -31,7 +31,6 @@ public class PredicateIsEqualExample {
 
         predicate = Predicate.isEqual("Java8");
         System.out.println("Java7, Java8 : " + predicate.test("Java7"));
-
 
     }
 }
