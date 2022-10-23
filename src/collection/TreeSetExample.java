@@ -55,7 +55,7 @@ public class TreeSetExample {
         // 제일 낮은 객체를 꺼내오고 컬렉션에서 제거한다.
         while (!scores.isEmpty()){
             score = scores.pollFirst();
-            System.out.println("남은 객체 수 : " + score);
+            System.out.println("남은 객체 수 : " + scores.size());
         }
 
     }
